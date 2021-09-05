@@ -15,7 +15,7 @@ def home():
     if request.method == "POST":
         height = request.form['board-h']
         width = request.form['board-w']
-        mineP = request.form['mine-percentage']
+        mineP = request.form['mineP']
         return redirect(url_for('game', height = height, width = width, mineP = mineP))
     return render_template('home.html')
 
@@ -23,7 +23,8 @@ def home():
 def game():
     height = (request.args['height'])
     width = (request.args['width'])
-    return render_template('index.html', height= height, width = width)
+    mineP = (request.args['mineP'])
+    return render_template('index.html', height= height, width = width, mineP = mineP)
 
 
 
