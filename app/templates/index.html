@@ -1,7 +1,11 @@
 <html>
     <head>
         <title>Minesweeper</title>
-        <script type='module'> import * as library from './static/__target__/clientlibrary.js'; window.library = library; window.gameState = library.GameState(parseInt('{{height}}'), parseInt('{{width}}'), 0.1); window.boardUI = library.BoardUI(gameState)</script>
+        <script type='module'> 
+            import * as library from './static/__target__/clientlibrary.js'; 
+            window.gameState = library.GameState(parseInt('{{height}}'), parseInt('{{width}}'), parseFloat('{{mineP}}')); 
+            window.boardUI = library.BoardUI(gameState)
+        </script>
     </head>
     
     <body>

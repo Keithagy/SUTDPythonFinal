@@ -67,6 +67,7 @@ class GameState:
 
     def __init__(self, boardWidth, boardHeight, minePercentage):
         totalMines = min(int(round(( boardWidth * boardHeight ) * minePercentage)), 1)
+        console.log("Total number of mines: ", totalMines)
         self.board = Board(boardWidth, boardHeight, totalMines)
         self.gameStarted = False
 
