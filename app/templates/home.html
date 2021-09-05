@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Minesweeper</title>
+    </head>
+    
+    <body>
+        <h1 id='title'>Welcome to Minesweeper</h1>
+        <p>
+        	Let's play Minesweeper!
+        </p>
+        <form method='POST'>
+            <label for='board-h'>Height</label>
+            <input type='number' id='board-h' name='board-h' min=5 max=100>
+            <br/>
+            <label for='board-w'>Width</label>
+            <input type='number' id='board-w' name='board-w' min=5 max=100>
+            <br/>
+            <label for='mine-percentage'>Mines as fraction of total squares (input 0-1) </label>
+            <input type='number' id='mine-percentage' name='mine-percentage' min=0 max=1>
+            <br/>
+            <button>
+                Start Game!
+            </button>
+        </form>
+        <script type="module">import * as library from './static/__target__/clientlibrary.js'; window.library = library;</script>
+    </body>
+</html>
